@@ -14,7 +14,7 @@ app.use(cookieParser());
 
 // ✅ CORS Middleware (Placed at the top)
 app.use(cors({
-    origin: "https://frontend-connectifyy.vercel.app/",
+    origin: "https://frontendconnectify.vercel.app/",
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true  // ✅ Allows credentials (cookies, auth headers)
