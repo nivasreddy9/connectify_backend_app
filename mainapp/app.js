@@ -16,7 +16,7 @@ app.use(cors({
     origin: "https://frontendconnectify.vercel.app",
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true  // ✅ Allows credentials (cookies, auth headers)
+    credentials: true  // ✅ Allows credentials (cookies)
 }));
 
 // ✅ Manually Handle Preflight Requests (Fixes OPTIONS request failure)
