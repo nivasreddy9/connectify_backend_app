@@ -6,19 +6,23 @@ const jwt=require("jsonwebtoken")
 const bcrypt=require("bcrypt")
 const cookieParser = require("cookie-parser");
 authrouter.use(cookieParser()); 
-const userAuth=require("../middlewares/cookie")
+
 
 
 authrouter.post("/signin",async(req,res)=>{
     try{
-        const{Name,Email,Phone,Password,photoUrl}=req.body;
+        const{Name,Email,Phone,Password,photoUrl,Age,
+            Gender,About}=req.body;
         const hashpassword=await bcrypt.hash(Password,10);
         const signinSave=new Subscriber({
             Name,
             Email,
             Phone,
             Password:hashpassword,  
-            photoUrl
+            photoUrl,
+            Age,
+            Gender,
+            About
         })
         await signinSave.save()
         res.json({
