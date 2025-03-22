@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 authrouter.use(cookieParser()); 
 
 
-
+//login
 authrouter.post("/signin",async(req,res)=>{
     try{
         const{Name,Email,Phone,Password,photoUrl,Age,
