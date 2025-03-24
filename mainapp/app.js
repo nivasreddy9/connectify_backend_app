@@ -12,7 +12,7 @@ const cors = require("cors");
 app.use(cookieParser());
 
 app.use(cors({
-    origin: ["http://localhost:5173"], 
+    origin: ["http://localhost:5173","https://frontend-connectifyy.vercel.app"], 
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true 
